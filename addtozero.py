@@ -28,6 +28,12 @@ def add_to_zero(nums):
     for num in nums:
         if num == 0:
             return True
+        else:
+            if -num in nums:
+                return True
+            else:
+                pass
+    return False
         
 
 

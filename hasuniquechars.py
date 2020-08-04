@@ -20,18 +20,17 @@ Uppercase and lowercase letters should be considered separately::
 
 def has_unique_chars(word):
     """Does word contains unique set of characters?"""
+    newList= []
     if word == []:
         return True
     else:
-        unique_word= []
-        word_list = list(word)
-        for letter in word:
-            if letter not in unique_word:
-                unique_word.append(letter)
-        if len(word_list) == len(unique_word):
-            return True
-        else:
-            return False
+       word = list(word)
+       for letters in word:
+            if letters not in newList:
+               newList.append(letters)
+            else:
+                return False
+    return True
 
 if __name__ == '__main__':
     import doctest
