@@ -13,12 +13,16 @@ For example::
 
 def find_longest_word(words):
     """Return longest word in list of words."""
-    words=words.split()
-    longest_word = ""
-    for word in words:
-        if len(word) > len(longest_word):
-            longest_word = word
-    return longest_word
+    return len(max(words,key=lambda words:len(words)))
+    
+    # longest_word = 0
+    # for word in words:
+    #     if len(word) > longest_word:
+    #         longest_word = len(word)
+    # return longest_word
+
+
+
 if __name__ == '__main__':
     import doctest
     if doctest.testmod().failed == 0:
